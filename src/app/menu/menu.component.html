@@ -1,0 +1,19 @@
+<div class="container">
+  <ul class="nav nav-pills">
+    <li class="nav-item" [routerLinkActive]="['active']">
+      <a class="nav-link-active" [routerLink]="['accueil']">Accueil</a>
+    </li>
+    <li class="nav-item" [routerLinkActive]="['active']">
+      <a class="nav-link" [routerLink]="['etudiant']">Etudiant</a>
+    </li>
+    <li class="nav-item" [routerLinkActive]="['active']">
+      <a class="nav-link" [routerLink]="['programme']">Programme</a>
+    </li>
+  </ul>
+</div><br>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+
+

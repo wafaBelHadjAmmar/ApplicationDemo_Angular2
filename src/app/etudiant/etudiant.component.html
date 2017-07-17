@@ -1,0 +1,29 @@
+<section class="col-md-6">
+  <div class="control-group">
+    <legend>Nouvel Etudiant</legend>
+    <div class="controls">
+      <input #NouvEtudiant name="user-input" type="text" placeholder="saisir nom etudiant..">
+      <button class="btn btn-primary" (click)="ajouterEtudiant(NouvEtudiant)">Ajouter</button>
+    </div>
+  </div>
+</section>
+
+
+
+<div class="col-md-5" *ngIf="etudiants.length > 0">
+  <legend>Liste des etudiants</legend>
+  <table class="table table-striped">
+    <thead>
+    <th>Nom et Prenom</th>
+    <th>Supp</th>
+    </thead>
+    <tbody>
+    <tr *ngFor="let etudiant of etudiants">
+      <td>{{etudiant.nom}}</td>
+      <td>
+        <button class="btn btn-danger" (click)="supprimerEtudiant(etudiant)">×</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
